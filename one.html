@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>  
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class=container>
+                <table class="table table-light table-hover">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>gender</th>
+            <th>creditcard</th>
+        </tr>
+        </thead>
+        <tbody id='to'>
+    </tbody>
+        </table>
+    </div>
+        </nav>
+    </body>
+<script>
+  let data=  [{"id":1,"gender":"Male"},
+{"id":2,"gender":"Male","creditcard":"4041378813458521"},
+{"id":3,"gender":"Male"},
+{"id":4,"gender":"Female","creditcard":"4017959127551802"},
+{"id":5,"gender":"Female","creditcard":"4041376159699260"},
+{"id":6,"gender":"Female","creditcard":"4041374439171523"},
+{"id":7,"gender":"Male"},
+{"id":8,"gender":"Female"},
+{"id":9,"gender":"Female"},
+{"id":10,"gender":"Male"}]
+let rowdata=""
+data.forEach((hi)=>{
+    rowdata=rowdata+`<tr><td>${hi.id}</td>
+        <td>${hi.gender}</td>
+        <td>${hi.creditcard}</td>
+        </tr>`
+
+})
+let tbody=document.getElementById('to')
+tbody.innerHTML=rowdata
+
+</script>
+</html>
